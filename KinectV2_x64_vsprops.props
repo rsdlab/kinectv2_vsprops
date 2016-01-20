@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<Link>
+			<AdditionalLibraryDirectories>$(KINECTSDK20_DIR)\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+			<AdditionalDependencies>Kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(KINECTSDK20_DIR)\inc;%(IncludePath)</AdditionalIncludeDirectories>
+		</ClCompile>
+	</ItemDefinitionGroup>
+	<ItemGroup />
+	
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<Link>
+			<AdditionalLibraryDirectories>$(KINECTSDK20_DIR)\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>		
+			<AdditionalDependencies>Kinect20.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(KINECTSDK20_DIR)\inc;%(IncludePath)</AdditionalIncludeDirectories>
+		</ClCompile>		
+	</ItemDefinitionGroup>
+	<ItemGroup />
+</Project>
